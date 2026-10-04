@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div>ФИО: Канищев Илья</div>
+        <div>Группа: P3208</div>
+        <div>Вариант: 438832</div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="graph-container">
+            <canvas id="graph" width="500" height="500"></canvas>
+        </div>
+
+        <div class="form-container">
+            <form id="point-form">
+                <div class="input-group">
+                    <div>Координата X:</div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="x" value="-3" required> -3</label>
+                        <label><input type="radio" name="x" value="-2"> -2</label>
+                        <label><input type="radio" name="x" value="-1"> -1</label>
+                        <label><input type="radio" name="x" value="0"> 0</label>
+                        <label><input type="radio" name="x" value="1"> 1</label>
+                        <label><input type="radio" name="x" value="2"> 2</label>
+                        <label><input type="radio" name="x" value="3"> 3</label>
+                        <label><input type="radio" name="x" value="4"> 4</label>
+                        <label><input type="radio" name="x" value="5"> 5</label>
+                    </div>
+                    <div id="x-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="y-input">Координата Y (-3 ... 5):</label>
+                    <input type="text" id="y-input" name="y" autocomplete="off" required>
+                    <div id="y-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <div>Радиус R:</div>
+                    <div class="button-group" id="r-buttons">
+                        <button type="button" class="r-btn" value="1">1</button>
+                        <button type="button" class="r-btn" value="2">2</button>
+                        <button type="button" class="r-btn" value="3">3</button>
+                        <button type="button" class="r-btn" value="4">4</button>
+                        <button type="button" class="r-btn" value="5">5</button>
+                        <button type="button" class="r-btn" value="R">R</button>
+                    </div>
+                    <input type="hidden" id="r-input" name="r">
+                    <div id="r-error" class="error-message"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Проверить</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="table-container">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Текущее время</th>
+                    <th>Время работы скрипта</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
